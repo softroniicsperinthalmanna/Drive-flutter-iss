@@ -15,10 +15,10 @@ class QuizScreen2 extends StatelessWidget {
         Stack(
           children: [
             SizedBox(
-              height: 190.h,
+              height: 200.h,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.only(left: 24, top: 40, right: 24).r,
+                padding: const EdgeInsets.only(left: 24, top: 48, right: 24).r,
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

@@ -26,16 +26,12 @@ class PackagesScreeen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20).r,
-        child: ListView(children: const [
-          PackageBox(), //  Custom Package Card class.............................
-          PackageBox(),//  Custom Package Card class.............................
-          PackageBox(),//  Custom Package Card class.............................
-          PackageBox()//  Custom Package Card class.............................
-        ]),
+        child: ListView.builder(itemBuilder: (context, index) {
+          return const PackageBox();//  Custom Package Card class.............................
+        },
+        itemCount: 3,)
       ),
     );
   }
 }
-
-
 
