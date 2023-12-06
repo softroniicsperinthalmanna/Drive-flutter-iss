@@ -34,14 +34,18 @@ class TutorregisterScreen extends StatelessWidget {
                         Positioned(
                           top: 30.r,
                            left: 120.r,
-                            child: Stack(
-                              children: [
-                                Image.asset("assets/images/img.png"),
-                                Positioned(
-                                    top: 13.r,
-                                    left: 13.r,
-                                    child: Image.asset("assets/images/editimg.png"))
-                              ],
+                            child:FloatingActionButton(
+                              onPressed: () {
+                                // image picker function................................
+                              },
+                              mini: true,
+                              backgroundColor: btncolor,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                side: const BorderSide(color: backcolor, width: 4),
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: const Icon(Icons.edit,size: 18,),
                             ))
                       ],
                     ),
@@ -81,6 +85,7 @@ class TutorregisterScreen extends StatelessWidget {
                                 height: 50.h,
                                 child: TextFormField(
                                   // controller: ,text editing controller....................
+                                  keyboardType: TextInputType.number,
                                     decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -145,6 +150,7 @@ class TutorregisterScreen extends StatelessWidget {
                         height: 50.h,
                         child: TextFormField(
                           // controller: ,text editing controller...........................
+                          keyboardType: TextInputType.emailAddress,
                             decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -169,6 +175,7 @@ class TutorregisterScreen extends StatelessWidget {
                         height: 50.h,
                         child: TextFormField(
                           // controller: ,text editing controller..........................
+                          keyboardType: TextInputType.number,
                             decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
@@ -206,4 +213,4 @@ class TutorregisterScreen extends StatelessWidget {
   }
 }
 
-//Image.asset("assets/images/img.png")
+

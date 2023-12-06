@@ -15,10 +15,10 @@ class QuizScreen1 extends StatelessWidget {
         backgroundColor: btncolor,
         body: Column(children: [
           SizedBox(
-            height: 224.h,
+            height: 235.h,
             width: double.infinity,
             child: Padding(
-              padding: const EdgeInsets.only(left: 24, top: 40, right: 24).r,
+              padding: const EdgeInsets.only(left: 24, top: 50, right: 24).r,
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -40,7 +40,7 @@ class QuizScreen1 extends StatelessWidget {
                           weight: FontWeight.w700),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 15).r,
+                      padding: const EdgeInsets.only(top: 10).r,
                       child: Row(
                         children: [
                           Expanded(

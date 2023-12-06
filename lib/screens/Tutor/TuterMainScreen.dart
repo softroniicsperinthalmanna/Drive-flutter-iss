@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/Mainscreencard.dart';
 import '../../widgets/apptext.dart';
 
-class TutermainScreen extends StatelessWidget {
-  const TutermainScreen({super.key});
+class TutorMainScreen extends StatelessWidget {
+  const TutorMainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +19,14 @@ class TutermainScreen extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(20).r,
-                      bottomLeft: Radius.circular(20))
+                  bottomRight: const Radius.circular(20).r,
+                  bottomLeft: const Radius.circular(20))
                   .r,
               color: btncolor),
           child: Padding(
             padding:
-                const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 30)
-                    .r,
+            const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 30)
+                .r,
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +37,7 @@ class TutermainScreen extends StatelessWidget {
                           onTap: () {
                             // notification screen function.......................................
                           },
-                          child: Image.asset("assets/icons/not.png"))),
+                          child: Icon(Icons.notifications,color: backcolor,))),
                   SizedBox(
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,18 +62,18 @@ class TutermainScreen extends StatelessWidget {
                           child: SizedBox(
                               height: 32.h,
                               child: TextFormField(
-                                  // controller: ,text editing controller...............................
+                                // controller: ,text editing controller...............................
                                   decoration: InputDecoration(
                                       enabledBorder: OutlineInputBorder(
                                           borderSide:
-                                              const BorderSide(color: dark),
+                                          const BorderSide(color: dark),
                                           borderRadius:
-                                              BorderRadius.circular(8).r),
+                                          BorderRadius.circular(8).r),
                                       focusedBorder: OutlineInputBorder(
                                           borderSide:
-                                              const BorderSide(color: dark),
+                                          const BorderSide(color: dark),
                                           borderRadius:
-                                              BorderRadius.circular(8).r),
+                                          BorderRadius.circular(8).r),
                                       hintText: "Search Services",
                                       hintStyle: TextStyle(fontSize: 13.sp),
                                       contentPadding: EdgeInsets.symmetric(
@@ -82,7 +82,7 @@ class TutermainScreen extends StatelessWidget {
                                       fillColor: textfldcolor))),
                         ),
                       ),
-                      Icon(Icons.search,color: Colors.white,size: 25,)
+                      Icon(Icons.search,color: Colors.white,size: 23,)
                     ],
                   )
                 ]),
@@ -90,31 +90,31 @@ class TutermainScreen extends StatelessWidget {
         ),
         Expanded(
             child: SizedBox(
-          child: ListView(children: [
-            MainScreencard(
-                title: "Students",
-                subtitle: "Check your driving session here",
-                img: "assets/images/phone.png",
-                icon: false,
-                click: () {
-                  // Card click function .......................
-                }), //Custom MainScreen card.............
-            MainScreencard(
-                title: "Online Exams",
-                subtitle: "Test your Theory Exam Perfomance here",
-                img: "assets/images/truck.png",
-                click: () {
-                  // Card click function .......................
-                }), //Custom MainScreen card........
-            MainScreencard(
-                title: "Services",
-                subtitle: "Motor Vehicle Online Services",
-                img: "assets/images/doc.png",
-                click: () {
-                  // Card click function .......................
-                }), //Custom MainScreen card.........
-          ]),
-        ))
+              child: ListView(children: [
+                MainScreencard(
+                    title: "Students",
+                    subtitle: "Check your driving session here",
+                    img: "assets/images/phone.png",
+                    icon: false,
+                    click: () {
+                      // Card click function .......................
+                    }), //Custom MainScreen card.............
+                MainScreencard(
+                    title: "Online Exams",
+                    subtitle: "Test your Theory Exam Perfomance here",
+                    img: "assets/images/truck.png",
+                    click: () {
+                      // Card click function .......................
+                    }), //Custom MainScreen card........
+                MainScreencard(
+                    title: "Services",
+                    subtitle: "Motor Vehicle Online Services",
+                    img: "assets/images/doc.png",
+                    click: () {
+                      // Card click function .......................
+                    }), //Custom MainScreen card.........
+              ]),
+            ))
       ]),
     );
   }

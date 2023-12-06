@@ -4,6 +4,7 @@ import 'package:driven/widgets/backbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../widgets/ProfileBox.dart';
 
@@ -22,9 +23,8 @@ class TutorprofileScreen extends StatelessWidget {
           ),
           Image.asset("assets/images/vect.png"),
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 23, top: 30).r,
+            padding: const EdgeInsets.only(left: 20, right: 23, top: 50).r,
             child: Column(
-
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Stack(
@@ -41,7 +41,7 @@ class TutorprofileScreen extends StatelessWidget {
                                     style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 16.sp)),
-                                Image.asset("assets/icons/call.png")
+                               Icon(Icons.notifications)
                               ],
                             ),
                             Padding(
@@ -54,54 +54,61 @@ class TutorprofileScreen extends StatelessWidget {
                                     width: 150.w,
                                     child: CircleAvatar(
                                       radius: 60.r,
-                                      child:
-                                      Image.asset("assets/images/tuter.png"),
+                                      child: Image.asset(
+                                          "assets/images/tuter.png"),
                                     ),
                                   ),
                                   Expanded(
                                       child: SizedBox(
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
                                               top: 30, left: 20, bottom: 10)
-                                              .r,
-                                          child: Column(
-                                              mainAxisAlignment:
+                                          .r,
+                                      child: Column(
+                                          mainAxisAlignment:
                                               MainAxisAlignment.spaceEvenly,
-                                              crossAxisAlignment:
+                                          crossAxisAlignment:
                                               CrossAxisAlignment.start,
-                                              children: [
-                                                Apptext3(
-                                                    text: "Muhammed Razan",
-                                                    textcolor: dark,
-                                                    size: 16.sp,
-                                                    weight: FontWeight.w500),
-                                                Apptext3(
-                                                    text: "Tutor",
-                                                    textcolor: dark,
-                                                    size: 14.sp,
-                                                    weight: FontWeight.w400),
-                                                Apptext3(
-                                                    text: "Change profile",
-                                                    textcolor: dark,
-                                                    size: 12.sp,
-                                                    weight: FontWeight.w400),
-                                              ]),
-                                        ),
-                                      )),
+                                          children: [
+                                            Apptext3(
+                                                text: "Muhammed Razan",
+                                                textcolor: dark,
+                                                size: 16.sp,
+                                                weight: FontWeight.w500),
+                                            Apptext3(
+                                                text: "Tutor",
+                                                textcolor: dark,
+                                                size: 14.sp,
+                                                weight: FontWeight.w400),
+                                            Apptext3(
+                                                text: "Change profile",
+                                                textcolor: dark,
+                                                size: 12.sp,
+                                                weight: FontWeight.w400),
+                                          ]),
+                                    ),
+                                  )),
                                 ]),
                               ),
                             ),
-
                           ]),
                     ),
                     Positioned(
                         top: 120.r,
                         left: 120.r,
-                        child: InkWell(
-                            onTap: (){
-                              //Image picker Function...................................
-                            },
-                            child: Image.asset("assets/images/editpic.png",width: 40.w,)))
+                        child: FloatingActionButton(
+                          onPressed: () {
+                            // image picker function................................
+                          },
+                          mini: true,
+                          backgroundColor: btncolor,
+                          child: Icon(Icons.edit,size: 18,),
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(color: backcolor, width: 4.w),
+                            borderRadius: BorderRadius.circular(50).r,
+                          ),
+                        ))
                   ],
                 ),
                 SizedBox(
@@ -125,12 +132,21 @@ class TutorprofileScreen extends StatelessWidget {
                             ],
                           ),
                         ),
+
+                        // Liner Percent Indicator............................
                         Padding(
-                          padding:  EdgeInsets.only(top: 15).r,
-                          child: Container(height: 4,width: 115,color: dark,),
+                          padding: EdgeInsets.only(top: 15).r,
+                          child: LinearPercentIndicator(
+                            lineHeight: 4,
+                            backgroundColor: Colors.grey,
+                            progressColor: btncolor,
+                            animation: true,
+                            animationDuration: 1000,
+                            percent: 0.5,
+                          ),
                         ),
                         Padding(
-                          padding:  EdgeInsets.only(top: 25).r,
+                          padding: EdgeInsets.only(top: 25).r,
                           child: Apptext3(
                               text: "My Reports:",
                               textcolor: btncolor,
@@ -140,7 +156,7 @@ class TutorprofileScreen extends StatelessWidget {
                       ]),
                 ),
                 Padding(
-                  padding:  EdgeInsets.only(top: 20.h),
+                  padding: EdgeInsets.only(top: 20.h),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -149,12 +165,12 @@ class TutorprofileScreen extends StatelessWidget {
                           ProfileBox(
                               title: "My Performance",
                               subtitle:
-                              "Some short description of this type of report.",
+                                  "Some short description of this type of report.",
                               image: "assets/icons/men.png"),
                           ProfileBox(
                               title: "My Documents",
                               subtitle:
-                              "Some short description of this type of report.",
+                                  "Some short description of this type of report.",
                               image: "assets/icons/checkk.png")
                         ],
                       ),
@@ -163,14 +179,14 @@ class TutorprofileScreen extends StatelessWidget {
                           ProfileBox(
                             title: "My Students",
                             subtitle:
-                            "Some short description of this type of report.",
+                                "Some short description of this type of report.",
                             image: "assets/icons/cal.png",
                             bookmark: true,
                           ),
                           ProfileBox(
                             title: "Help",
                             subtitle:
-                            "Some short description of this type of report.",
+                                "Some short description of this type of report.",
                             image: "assets/icons/love.png",
                             bookmark: true,
                           )
@@ -188,19 +204,19 @@ class TutorprofileScreen extends StatelessWidget {
   }
 
   Widget buildContainer(double width, String title) => Padding(
-    //Container function.............................
-    padding: const EdgeInsets.only(right: 10, top: 10).r,
-    child: Container(
-      height: 30.h,
-      width: width,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8).r, color: customgrey),
-      child: Center(
-          child: Apptext3(
-              text: title,
-              textcolor: btncolor,
-              size: 12.sp,
-              weight: FontWeight.w500)),
-    ),
-  );
+        //Container function.............................
+        padding: const EdgeInsets.only(right: 10, top: 10).r,
+        child: Container(
+          height: 30.h,
+          width: width.w,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8).r, color: customgrey),
+          child: Center(
+              child: Apptext3(
+                  text: title,
+                  textcolor: btncolor,
+                  size: 12.sp,
+                  weight: FontWeight.w500)),
+        ),
+      );
 }

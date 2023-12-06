@@ -3,8 +3,11 @@ import 'package:driven/widgets/apptext.dart';
 import 'package:driven/widgets/backbutton.dart';
 import 'package:driven/widgets/buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'EditSessionall.dart';
 
 class MysessionScreen2 extends StatefulWidget {
   const MysessionScreen2({super.key});
@@ -78,7 +81,7 @@ class _MysessionScreen2State extends State<MysessionScreen2> {
                   labelColor: btncolor,
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicatorPadding:
-                  EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
+                      EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
                   indicator: BoxDecoration(
                       borderRadius: BorderRadius.circular(3),
                       // Creates border
@@ -98,7 +101,14 @@ class _MysessionScreen2State extends State<MysessionScreen2> {
                 ),
               ),
             ),
-            // Expanded(child: TabBarView(children: []))
+            //Tab Bar view...........................................................
+            const Expanded(
+                child: TabBarView(children: [
+              EditsessionallScreen(),
+              //custom edit session tale..............
+              EditsessionallScreen(),
+              EditsessionallScreen(),
+            ]))
           ]),
         ),
         floatingActionButton: FloatingActionButton(
@@ -108,13 +118,14 @@ class _MysessionScreen2State extends State<MysessionScreen2> {
             backgroundColor: btncolor,
             child: const Center(
                 child: Icon(
-                  Icons.add,
-                  color: backcolor,
-                ))),
+              Icons.add,
+              color: backcolor,
+            ))),
       ),
     );
   }
 
+  // Add button function....................................................
   Future<void> add() async {
     showDialog(
       context: context,
@@ -122,20 +133,48 @@ class _MysessionScreen2State extends State<MysessionScreen2> {
         return Dialog(
           shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
           child: Container(
-            height: 213.h,
+            height: 300.h,
             width: 300.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15), color: btncolor),
             child: Padding(
               padding: const EdgeInsets.all(20).r,
               child: Column(children: [
-                Text("APPLY FOR SESSION",style: GoogleFonts.roboto(fontSize: 13,fontWeight: FontWeight.w700,color: backcolor),),
+
+                Text(
+                  "WRITE REVIEW",
+                  style: GoogleFonts.roboto(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: backcolor),
+                ),
+                //Rating Bar...............................................................
+                Padding(
+                  padding: const EdgeInsets.only(top: 15).r,
+                  child: RatingBar.builder(
+                    itemSize: 30,
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 3),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star_border_purple500_outlined,
+                      color: Colors.amber,
+                    ),
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
+                  ),
+                ),
+               // Title  Text form field.....................................................
                 Padding(
                   padding: const EdgeInsets.only(top: 20).r,
                   child: SizedBox(
                       height: 36.h,
                       child: TextFormField(
-                        // controller: ,text editing controller
+                          // controller: ,text editing controller
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
@@ -143,19 +182,22 @@ class _MysessionScreen2State extends State<MysessionScreen2> {
                               focusedBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
                                   borderRadius: BorderRadius.circular(8).r),
-                              hintText: "Vehicle Type",
+                              hintText: "title",
                               hintStyle: TextStyle(fontSize: 15.sp),
-                              contentPadding:
-                              EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 5.h, horizontal: 15.w),
                               filled: true,
                               fillColor: backcolor))),
                 ),
+                // //Review Text Field..................................................................
                 Padding(
-                  padding: const EdgeInsets.only(top: 10).r,
+                  padding: const EdgeInsets.only(top: 10,bottom: 8).r,
                   child: SizedBox(
-                      height: 36.h,
+                      height: 50.h,
                       child: TextFormField(
-                        // controller: ,text editing controller
+                          // controller: ,text editing controller
+                          maxLines: null,
+                          keyboardType: TextInputType.multiline,
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
@@ -163,26 +205,23 @@ class _MysessionScreen2State extends State<MysessionScreen2> {
                               focusedBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
                                   borderRadius: BorderRadius.circular(8).r),
-                              hintText: "Select Time & Date",
+                              hintText: "Review",
                               hintStyle: TextStyle(fontSize: 15.sp),
-                              contentPadding:
-                              EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 5.h, horizontal: 15.w),
                               filled: true,
                               fillColor: backcolor))),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10).r,
-                  child: Button(
-                    btnname: "DONE",
-                    btntheam: btncolor,
-                    textcolor: backcolor,
-                    outlinecolor: backcolor
-                    , click: (){
-
+                //Button.......................................
+                Button(
+                  btnname: "SEND",
+                  btntheam: btncolor,
+                  textcolor: backcolor,
+                  outlinecolor: backcolor,
+                  click: () {
                     //button pressed....................................
-
                   },
-                    height: 36,),
+                  height: 36,
                 )
               ]),
             ),

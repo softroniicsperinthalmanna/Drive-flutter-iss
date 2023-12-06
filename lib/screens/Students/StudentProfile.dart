@@ -4,6 +4,7 @@ import 'package:driven/widgets/backbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../widgets/ProfileBox.dart';
 
@@ -22,7 +23,7 @@ class StudentProfile extends StatelessWidget {
           ),
           Image.asset("assets/images/vect.png"),
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 23, top: 30).r,
+            padding: const EdgeInsets.only(left: 20, right: 23, top: 50).r,
             child: Column(
 
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,7 +112,19 @@ class StudentProfile extends StatelessWidget {
                     Positioned(
                         top: 120.r,
                         left: 120.r,
-                        child: Image.asset("assets/images/editpic.png",width: 40.w,))
+                        child: FloatingActionButton(
+                          onPressed: () {
+                            // image picker function................................
+                          },
+                          mini: true,
+                          backgroundColor: btncolor,
+                          child: Icon(Icons.edit,size: 18,),
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(color: backcolor, width: 4.w),
+                            borderRadius: BorderRadius.circular(50).r,
+                          ),
+                        ))
                   ],
                 ),
                 SizedBox(
@@ -137,7 +150,14 @@ class StudentProfile extends StatelessWidget {
                         ),
                         Padding(
                           padding:  EdgeInsets.only(top: 15).r,
-                          child: Container(height: 4,width: 115,color: dark,),
+                          child:LinearPercentIndicator(
+                            lineHeight: 4,
+                            backgroundColor: Colors.grey,
+                            progressColor: btncolor,
+                            animation: true,
+                            animationDuration: 1000,
+                            percent: 0.5,
+                          ),
                         ),
                         Padding(
                           padding:  EdgeInsets.only(top: 20).r,

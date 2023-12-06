@@ -1,6 +1,6 @@
 import 'package:driven/home.dart';
 import 'package:driven/screens/Common/AfterotpScreen.dart';
-import 'package:driven/screens/LoginScreen.dart';
+import 'package:driven/screens/Admin/LoginScreen.dart';
 import 'package:driven/screens/Students/MainScreen.dart';
 import 'package:driven/screens/Students/MydocumentScreen.dart';
 import 'package:driven/screens/Students/MysessionStudent.dart';
@@ -14,8 +14,10 @@ import 'package:driven/screens/Common/SplashScreen.dart';
 import 'package:driven/screens/Common/StudentLogin.dart';
 import 'package:driven/screens/Students/StudentProfile.dart';
 import 'package:driven/screens/Common/WelcomeScreen.dart';
+import 'package:driven/screens/Students/Studentsessionall.dart';
 import 'package:driven/screens/Students/TrailAppoints.dart';
 import 'package:driven/screens/Tutor/AdddocumentScreen.dart';
+import 'package:driven/screens/Tutor/EditSessionall.dart';
 import 'package:driven/screens/Tutor/MyStudent.dart';
 import 'package:driven/screens/Tutor/Mysession1.dart';
 import 'package:driven/screens/Tutor/Mysession2.dart';
@@ -24,6 +26,7 @@ import 'package:driven/screens/Tutor/Mysessionall.dart';
 import 'package:driven/screens/Tutor/Mystudentall.dart';
 import 'package:driven/screens/Tutor/Mystudentold.dart';
 import 'package:driven/screens/Tutor/StudentProfile.dart';
+import 'package:driven/screens/Tutor/TuterMainScreen.dart';
 import 'package:driven/screens/Tutor/TutoProfile.dart';
 import 'package:driven/screens/Tutor/TutorRegister.dart';
 import 'package:driven/screens/Tutor/Mysessionpending.dart';
@@ -51,8 +54,9 @@ class MyApp extends StatelessWidget {
             // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             // useMaterial3: true,
           ),
-          home: MysessionScreen()),
+          home: TutorprofileScreen()),
       designSize: Size(375, 812),
     );
   }
 }
+

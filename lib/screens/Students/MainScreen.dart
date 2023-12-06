@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/Mainscreencard.dart';
 import '../../widgets/apptext.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class StudentMainScreen extends StatelessWidget {
+  const StudentMainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class MainScreen extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(20).r,
-                      bottomLeft: Radius.circular(20))
+                      bottomRight: const Radius.circular(20).r,
+                      bottomLeft: const Radius.circular(20))
                   .r,
               color: btncolor),
           child: Padding(
@@ -37,7 +37,7 @@ class MainScreen extends StatelessWidget {
                           onTap: () {
                             // notification screen function.......................................
                           },
-                          child: Image.asset("assets/icons/not.png"))),
+                          child: Icon(Icons.notifications,color: backcolor,))),
                   SizedBox(
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +82,7 @@ class MainScreen extends StatelessWidget {
                                       fillColor: textfldcolor))),
                         ),
                       ),
-                      Icon(Icons.search,color: Colors.white,size: 25,)
+                      Icon(Icons.search,color: Colors.white,size: 23,)
                     ],
                   )
                 ]),

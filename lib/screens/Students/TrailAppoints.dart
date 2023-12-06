@@ -6,6 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'TrailPending.dart';
+import 'Trailappoinmentall.dart';
+import 'Trailfinshed.dart';
+
 class TrailappointsScreen extends StatefulWidget {
   const TrailappointsScreen({super.key});
 
@@ -78,7 +82,7 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
                   labelColor: btncolor,
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicatorPadding:
-                  EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
+                      EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
                   indicator: BoxDecoration(
                       borderRadius: BorderRadius.circular(3),
                       // Creates border
@@ -98,7 +102,14 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
                 ),
               ),
             ),
-            // Expanded(child: TabBarView(children: []))
+
+            // Tab Bar view............................................
+            const Expanded(
+                child: TabBarView(children: [
+              TrailallScreen(),
+              TrailfinishScreen(),
+              TrailPendingScreen()
+            ]))
           ]),
         ),
         floatingActionButton: FloatingActionButton(
@@ -108,9 +119,9 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
             backgroundColor: btncolor,
             child: const Center(
                 child: Icon(
-                  Icons.add,
-                  color: backcolor,
-                ))),
+              Icons.add,
+              color: backcolor,
+            ))),
       ),
     );
   }
@@ -129,13 +140,19 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
             child: Padding(
               padding: const EdgeInsets.all(20).r,
               child: Column(children: [
-                Text("APPLY FOR SESSION",style: GoogleFonts.roboto(fontSize: 13,fontWeight: FontWeight.w700,color: backcolor),),
+                Text(
+                  "APPLY FOR SESSION",
+                  style: GoogleFonts.roboto(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: backcolor),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20).r,
                   child: SizedBox(
                       height: 36.h,
                       child: TextFormField(
-                        // controller: ,text editing controller
+                          // controller: ,text editing controller
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
@@ -145,8 +162,8 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
                                   borderRadius: BorderRadius.circular(8).r),
                               hintText: "Vehicle Type",
                               hintStyle: TextStyle(fontSize: 15.sp),
-                              contentPadding:
-                              EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 5.h, horizontal: 15.w),
                               filled: true,
                               fillColor: backcolor))),
                 ),
@@ -155,7 +172,7 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
                   child: SizedBox(
                       height: 36.h,
                       child: TextFormField(
-                        // controller: ,text editing controller
+                          // controller: ,text editing controller
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
@@ -165,8 +182,8 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
                                   borderRadius: BorderRadius.circular(8).r),
                               hintText: "Select Time & Date",
                               hintStyle: TextStyle(fontSize: 15.sp),
-                              contentPadding:
-                              EdgeInsets.symmetric(vertical: 5.h, horizontal: 15.w),
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 5.h, horizontal: 15.w),
                               filled: true,
                               fillColor: backcolor))),
                 ),
@@ -176,13 +193,12 @@ class _TrailappointsScreenState extends State<TrailappointsScreen> {
                     btnname: "DONE",
                     btntheam: btncolor,
                     textcolor: backcolor,
-                    outlinecolor: backcolor
-                    , click: (){
-
-                    //button pressed....................................
-
-                  },
-                    height: 36,),
+                    outlinecolor: backcolor,
+                    click: () {
+                      //button pressed....................................
+                    },
+                    height: 36,
+                  ),
                 )
               ]),
             ),
