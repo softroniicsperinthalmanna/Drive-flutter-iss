@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/apptext.dart';
 import '../../widgets/backbutton.dart';
 
-class AddStudentScreen extends StatelessWidget {
-  AddStudentScreen({super.key});
+class UpdateTutorScreen extends StatelessWidget {
+  UpdateTutorScreen({super.key});
 
   @override
   List<String> Vehicle = ["Hevy", "Two Wheler"];
@@ -20,7 +20,7 @@ class AddStudentScreen extends StatelessWidget {
           child: const backbutton(),
         ),
         title: Apptext3(
-            text: "Add Student",
+            text: "Update Tutor",
             textcolor: btncolor,
             size: 16.sp,
             weight: FontWeight.w500),
@@ -33,8 +33,13 @@ class AddStudentScreen extends StatelessWidget {
           child: Stack(
             children: [
               Column(children: [
-                CircleAvatar(radius: 60.r,child: Image.asset("assets/images/propic.png"),),
-                SizedBox(height: 30.h,),
+                CircleAvatar(radius: 60.r,child: Image.asset("assets/images/tuter.png"),),
+                SizedBox(height: 5.h,),
+                Apptext3(text: "Id : PM64785", textcolor: btncolor, size: 16.sp, weight: FontWeight.w500),
+                Apptext3(text: "Pass : MK0147258", textcolor: btncolor, size: 14.sp, weight: FontWeight.w400),
+                SizedBox(
+                  height: 15.h,
+                ),
                 CustomTextField(hint: "Name"),
                 SizedBox(
                   height: 8.h,
@@ -114,7 +119,7 @@ class CustomTextField extends StatelessWidget {
   });
 
   final String hint;
-final TextInputType kebordtype;
+  final TextInputType kebordtype;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -125,7 +130,7 @@ final TextInputType kebordtype;
               filled: true,
               hintText: hint,
               contentPadding:
-                  EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.w),
+              EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.w),
               focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: bordercolor),
                   borderRadius: BorderRadius.circular(8).r),

@@ -43,14 +43,14 @@ class NewTrailScreen extends StatelessWidget {
               height: 30.h,
             ),
             CustomTextdrop(
-              Student: Student,
+              list: Student,
               hint: "Select Student",
             ),
             SizedBox(
               height: 10.h,
             ),
             CustomTextdrop(
-              Student: Tutor,
+              list: Tutor,
               hint: "Select Tutor",
             ),
             SizedBox(
@@ -62,19 +62,19 @@ class NewTrailScreen extends StatelessWidget {
                   decoration: InputDecoration(
                       hintText: "Select Time & Date",
                       focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: hashcolor),
+                          borderSide: const BorderSide(color: bordercolor),
                           borderRadius: BorderRadius.circular(8).r),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: hashcolor),
+                          borderSide: const BorderSide(color: bordercolor),
                           borderRadius: BorderRadius.circular(8).r),
                       border: const OutlineInputBorder(
-                          borderSide: BorderSide(color: hashcolor))),
+                          borderSide: BorderSide(color: bordercolor))),
                 )),
             SizedBox(
               height: 10.h,
             ),
             CustomTextdrop(
-              Student: Vehicle,
+              list: Vehicle,
               hint: "Select Vehicle",
             ),
             SizedBox(
@@ -99,11 +99,11 @@ class NewTrailScreen extends StatelessWidget {
 class CustomTextdrop extends StatelessWidget {
   const CustomTextdrop({
     super.key,
-    required this.Student,
+    required this.list,
     required this.hint,
   });
 
-  final List<String> Student;
+  final List<String> list;
   final String hint;
 
   @override
@@ -118,14 +118,14 @@ class CustomTextdrop extends StatelessWidget {
               weight: FontWeight.w500),
           decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: hashcolor),
+                  borderSide: const BorderSide(color: bordercolor),
                   borderRadius: BorderRadius.circular(8).r),
               enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: hashcolor),
+                  borderSide: const BorderSide(color: bordercolor),
                   borderRadius: BorderRadius.circular(8).r),
               border: const OutlineInputBorder(
-                  borderSide: BorderSide(color: hashcolor))),
-          items: Student.map((String value) {
+                  borderSide: BorderSide(color: bordercolor))),
+          items: list.map((String value) {
             return DropdownMenuItem<String>(value: value, child: Text(value));
           }).toList(),
           onChanged: (newvalue) {}),

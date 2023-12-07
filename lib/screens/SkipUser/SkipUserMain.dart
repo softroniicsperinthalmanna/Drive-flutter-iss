@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/Mainscreencard.dart';
 import '../../widgets/apptext.dart';
 
-class TutorMainScreen extends StatelessWidget {
-  const TutorMainScreen({super.key});
+class SkipUserMainScreen extends StatelessWidget {
+  const SkipUserMainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -90,9 +90,7 @@ class TutorMainScreen extends StatelessWidget {
         ),
         Expanded(
             child: SizedBox(
-              child: ListView(
-
-                  children: [
+              child: ListView(children: [
                 MainScreencard(
                     title: "Students",
                     subtitle: "Check your driving session here",
@@ -101,13 +99,7 @@ class TutorMainScreen extends StatelessWidget {
                     click: () {
                       // Card click function .......................
                     }), //Custom MainScreen card.............
-                MainScreencard(
-                    title: "Sessions",
-                    subtitle: "Test your Theory Exam Perfomance here",
-                    img: "assets/images/truck.png",
-                    click: () {
-                      // Card click function .......................
-                    }), //Custom MainScreen card........
+
                 MainScreencard(
                     title: "Services",
                     subtitle: "Motor Vehicle Online Services",
