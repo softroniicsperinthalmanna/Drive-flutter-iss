@@ -1,4 +1,11 @@
 import 'package:driven/home.dart';
+import 'package:driven/screens/Admin/AdPackage.dart';
+import 'package:driven/screens/Admin/AdminSession.dart';
+import 'package:driven/screens/Admin/SendNotification.dart';
+import 'package:driven/screens/Admin/Studentlist.dart';
+import 'package:driven/screens/Admin/Quizbank.dart';
+import 'package:driven/screens/Admin/StudentListAll.dart';
+import 'package:driven/screens/Admin/TutorList.dart';
 import 'package:driven/screens/Common/AfterotpScreen.dart';
 import 'package:driven/screens/Admin/LoginScreen.dart';
 import 'package:driven/screens/Students/MainScreen.dart';
@@ -6,9 +13,13 @@ import 'package:driven/screens/Students/MydocumentScreen.dart';
 import 'package:driven/screens/Students/MysessionStudent.dart';
 import 'package:driven/screens/Common/OtpScreen.dart';
 import 'package:driven/screens/Students/PackagesScreen.dart';
+import 'package:driven/screens/Students/QuestionList.dart';
 import 'package:driven/screens/Students/QuestionbankScreen.dart';
+import 'package:driven/screens/Students/Queston.dart';
+import 'package:driven/screens/Students/QuizPanel.dart';
 import 'package:driven/screens/Students/QuizScreen1.dart';
 import 'package:driven/screens/Students/QuizScreen2.dart';
+import 'package:driven/screens/Students/QuizScreen3.dart';
 import 'package:driven/screens/Students/RegisterScreen.dart';
 import 'package:driven/screens/Common/SplashScreen.dart';
 import 'package:driven/screens/Common/StudentLogin.dart';
@@ -54,7 +65,7 @@ class MyApp extends StatelessWidget {
             // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             // useMaterial3: true,
           ),
-          home: TutorprofileScreen()),
+          home: AdminPackagesScreeen()),
       designSize: Size(375, 812),
     );
   }

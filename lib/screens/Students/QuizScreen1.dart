@@ -4,6 +4,8 @@ import 'package:driven/widgets/backbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'QuestionList.dart';
+
 class QuizScreen1 extends StatelessWidget {
   const QuizScreen1({super.key});
 
@@ -25,7 +27,7 @@ class QuizScreen1 extends StatelessWidget {
                     const backbutton(),
                     Padding(
                       padding: const EdgeInsets.only(top: 15).r,
-                      child:  Apptext3(
+                      child: Apptext3(
                           text: "Hello, User",
                           textcolor: backcolor,
                           size: 14.sp,
@@ -33,7 +35,7 @@ class QuizScreen1 extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 15).r,
-                      child:  Apptext3(
+                      child: Apptext3(
                           text: "Let's test your knowledge",
                           textcolor: backcolor,
                           size: 20.sp,
@@ -124,10 +126,13 @@ class QuizScreen1 extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 15.h,
-                ),
-                //const Expanded(child: TabBarView(children: []))
+                const Expanded(
+                    child: TabBarView(children: [
+                  QuestionListScreen(),
+                  QuestionListScreen(),
+                  QuestionListScreen(),
+                      QuestionListScreen(),
+                ]))
               ]),
             ),
           )),
