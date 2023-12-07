@@ -1,6 +1,11 @@
 import 'package:driven/home.dart';
 import 'package:driven/screens/Admin/AdPackage.dart';
+import 'package:driven/screens/Admin/AddNewTrail.dart';
+import 'package:driven/screens/Admin/AddVehicle.dart';
+import 'package:driven/screens/Admin/AdminMainScreen.dart';
+import 'package:driven/screens/Admin/AdminProfile.dart';
 import 'package:driven/screens/Admin/AdminSession.dart';
+import 'package:driven/screens/Admin/AddNewSession.dart';
 import 'package:driven/screens/Admin/SendNotification.dart';
 import 'package:driven/screens/Admin/Studentlist.dart';
 import 'package:driven/screens/Admin/Quizbank.dart';
@@ -65,7 +70,7 @@ class MyApp extends StatelessWidget {
             // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             // useMaterial3: true,
           ),
-          home: AdminPackagesScreeen()),
+          home: NewTrailScreen()),
       designSize: Size(375, 812),
     );
   }
