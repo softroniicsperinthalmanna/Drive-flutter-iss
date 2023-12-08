@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
             // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             // useMaterial3: true,
           ),
-          home: StudentProfile()),
+          home: AdminMainScreen()),
       designSize: Size(375, 812),
     );
   }

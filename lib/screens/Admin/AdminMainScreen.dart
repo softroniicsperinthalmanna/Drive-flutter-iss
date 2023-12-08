@@ -92,8 +92,10 @@ class AdminMainScreen extends StatelessWidget {
          Expanded(
             child: SizedBox(
                      child: Padding(
-                       padding: const EdgeInsets.only(left: 20,right: 20).r,
-                       child: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                       padding: const EdgeInsets.only(left: 20,right: 20,top: 20).r,
+                       child: GridView(
+                         padding: EdgeInsets.zero,
+                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                            crossAxisCount: 2,
                            crossAxisSpacing: 12,
                            mainAxisSpacing: 12
