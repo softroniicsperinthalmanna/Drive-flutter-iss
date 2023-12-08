@@ -7,8 +7,13 @@ class backbutton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: 51.h,width: 51.w,
-        child: Image.asset("assets/icons/back.png"));
+    return InkWell(
+      onTap: (){
+        Navigator.pop(context);
+      },
+      child: SizedBox(
+          height: 51.h,width: 51.w,
+          child: Image.asset("assets/icons/back.png")),
+    );
   }
 }

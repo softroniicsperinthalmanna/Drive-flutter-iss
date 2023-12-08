@@ -28,9 +28,9 @@ class DocumentCrd extends StatelessWidget { // Add document Custom card ........
                           .r,
                       color: Colors.grey[400]))),
           Container(
-            height: 42,
+            height: 42.h,
             decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
+                borderRadius:  const BorderRadius.only(
                     bottomRight: Radius.circular(20),
                     bottomLeft: Radius.circular(20))
                     .r,

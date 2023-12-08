@@ -14,7 +14,7 @@ class PackageBox extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10).r,
       child: Container(
-        height: 150.h,
+        height: 165.h,
         width: 340.w,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20).r, color: btncolor),
@@ -24,92 +24,21 @@ class PackageBox extends StatelessWidget {
             children: [
               Expanded(
                   child: SizedBox(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Apptext2(
-                              text: "Package 1",
-                              textcolor: backcolor,
-                              size: 20.sp,
-                              weight: FontWeight.w500),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10).r,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/icons/round.png",
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10).r,
-                                  child: Apptext2(
-                                      text: "Voice messages anywhere",
-                                      textcolor: backcolor,
-                                      size: 9.sp,
-                                      weight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5).r,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/icons/round.png",
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10).r,
-                                  child: Apptext2(
-                                      text: "Voice messages anywhere",
-                                      textcolor: backcolor,
-                                      size: 9.sp,
-                                      weight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5).r,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/icons/round.png",
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10).r,
-                                  child: Apptext2(
-                                      text: "Voice messages anywhere",
-                                      textcolor: backcolor,
-                                      size: 9.sp,
-                                      weight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5).r,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/icons/round.png",
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10).r,
-                                  child: Apptext2(
-                                      text: "Voice messages anywhere",
-                                      textcolor: backcolor,
-                                      size: 9.sp,
-                                      weight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                          )
-                        ]),
-                  )),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Apptext2(
+                          text: "Package 1",
+                          textcolor: backcolor,
+                          size: 20.sp,
+                          weight: FontWeight.w500),
+                      BuildRow(), //Text Row Function............................
+                      BuildRow(),//Text Row Function............................
+                      BuildRow(),//Text Row Function............................
+                      BuildRow(),//Text Row Function............................
+
+                    ]),
+              )),
               SizedBox(
                 width: 150.w,
                 child: Padding(
@@ -142,6 +71,30 @@ class PackageBox extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+
+  //Text Row function................................................
+  Widget BuildRow() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 5).r,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.asset(
+            "assets/icons/round.png",
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10).r,
+            child: Apptext2(
+                text: "Voice messages anywhere",
+                textcolor: backcolor,
+                size: 9.sp,
+                weight: FontWeight.w500),
+          ),
+        ],
       ),
     );
   }

@@ -37,7 +37,7 @@ class AdminMainScreen extends StatelessWidget {
                           onTap: () {
                             // notification screen function.......................................
                           },
-                          child: Icon(Icons.notifications,color: backcolor,))),
+                          child: const Icon(Icons.notifications,color: backcolor,))),
                   SizedBox(
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +82,12 @@ class AdminMainScreen extends StatelessWidget {
                                       fillColor: textfldcolor))),
                         ),
                       ),
-                      const Icon(Icons.search,color: Colors.white,size: 23,)
+                      InkWell(
+                          onTap: (){
+
+                            // Search function....................................
+                          },
+                          child: const Icon(Icons.search,color: Colors.white,size: 23,))
                     ],
                   )
                 ]),
@@ -101,10 +106,14 @@ class AdminMainScreen extends StatelessWidget {
                            mainAxisSpacing: 12
                        ),
                        children:  [
-                         MianBox(title: "Students",icon: Icons.groups,click: (){}), MianBox(title: "Tutors",icon: Icons.group,click: (){}),
-                         MianBox(title: "Vehicles",icon: Icons.drive_eta_rounded,click: (){}), MianBox(title: "Sessions",icon: Icons.date_range,click: (){}),
-                         MianBox(title: "Trials",icon: Icons.calendar_month_sharp,click: (){}), MianBox(title: "Question Banks",icon: Icons.menu_book,click: (){}),
-                         MianBox(title: "Quiz",icon: Icons.leaderboard,click: (){}), MianBox(title: "Notification",icon: Icons.notifications,click: (){}),
+                         MianBox(title: "Students",icon: Icons.groups,click: (){}),//Custom Container Box.............................
+                         MianBox(title: "Tutors",icon: Icons.group,click: (){}),
+                         MianBox(title: "Vehicles",icon: Icons.drive_eta_rounded,click: (){}),
+                         MianBox(title: "Sessions",icon: Icons.date_range,click: (){}),
+                         MianBox(title: "Trials",icon: Icons.calendar_month_sharp,click: (){}),
+                         MianBox(title: "Question Banks",icon: Icons.menu_book,click: (){}),
+                         MianBox(title: "Quiz",icon: Icons.leaderboard,click: (){}),
+                         MianBox(title: "Notification",icon: Icons.notifications,click: (){}),
                        ],),
                      ),
             ))

@@ -4,6 +4,7 @@ import 'package:driven/widgets/backbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../widgets/ProfileBox.dart';
 
@@ -72,7 +73,7 @@ class StudentprofileScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       Apptext3(
-                          text: "Your overall progress is ",
+                          text: "Student overall progress is ",
                           textcolor: btncolor,
                           size: 18.sp,
                           weight: FontWeight.w300),
@@ -84,13 +85,24 @@ class StudentprofileScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15).r,
+                  child: LinearPercentIndicator(
+                    lineHeight: 4,
+                    backgroundColor: Colors.grey,
+                    progressColor: btncolor,
+                    animation: true,
+                    animationDuration: 1000,
+                    percent: 0.5,
+                  ),
+                ),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: const EdgeInsets.only(top: 15).r,
                     child: Apptext3(
                         text: "Sessions & Reveiw",
-                        textcolor: Colors.grey,
+                        textcolor: hashcolor,
                         size: 24.sp,
                         weight: FontWeight.w300),
                   ),

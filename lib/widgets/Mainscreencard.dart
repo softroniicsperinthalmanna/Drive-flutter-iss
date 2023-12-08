@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constants/color.dart';
 import 'apptext.dart';
 
-class MainScreencard extends StatelessWidget { // Custom Main Screen card class............................
+class MainScreencard extends StatelessWidget { // Custom Main Screen card ............................
   const MainScreencard({
     super.key,
     required this.title,
@@ -57,7 +57,7 @@ class MainScreencard extends StatelessWidget { // Custom Main Screen card class.
                           height: 39.h,
                           width: 138.w,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(10).r,
                               color: btncolor),
                           child: Padding(
                             padding: const EdgeInsets.all(5).r,
