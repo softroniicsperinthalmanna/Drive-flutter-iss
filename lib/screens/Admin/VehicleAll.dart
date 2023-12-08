@@ -8,8 +8,8 @@ class VehicleAllScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(children: [
-        VehicleTale(
+      body: ListView(children: const [
+        VehicleTale(                             //Custom Vehicle Tale.................................................
             vehiclename: "Maruthi 800",
             model: "GLE AMG 2.0 Hybrid",
             tutorname: "Arun kumar",

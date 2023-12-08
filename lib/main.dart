@@ -77,9 +77,10 @@ class MyApp extends StatelessWidget {
             // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             // useMaterial3: true,
           ),
-          home: AdminMainScreen()),
+          home: TutorprofileScreen()),
       designSize: Size(375, 812),
     );
   }
 }
+
 

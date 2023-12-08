@@ -21,16 +21,18 @@ class VehicleTale extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10).r,
       child: Container(
-        height: 110.h,
+        height: 140.h,
         width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10).r,
             border: Border.all(color:hashcolor)),
-        child: Row(children: [
+        child: Row(
+            children: [
           Expanded(child: SizedBox(
             child: Padding(
               padding: const EdgeInsets.only(left: 10,top: 10).r,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Apptext3(text: vehiclename, textcolor: hashcolor, size: 16.sp, weight: FontWeight.w600),
@@ -39,14 +41,14 @@ class VehicleTale extends StatelessWidget {
                     SizedBox(height: 5.h,),
                     Row(
                       children: [
-                         Icon(Icons.star_border,color: hashcolor),
+                         const Icon(Icons.star_border,color: hashcolor),
                         SizedBox(width: 5.w,),
                         Apptext3(text: "Tutor :${tutorname}", textcolor: hashcolor, size: 10.sp, weight: FontWeight.w400),
                       ],
                     ),
                     Row(
                       children: [
-                         Icon(Icons.location_on,color: hashcolor),
+                         const Icon(Icons.location_on,color: hashcolor),
                         SizedBox(width: 5.w,),
                         Apptext3(text: "Branch :${location}", textcolor: hashcolor, size: 10.sp, weight: FontWeight.w400),
                       ],
