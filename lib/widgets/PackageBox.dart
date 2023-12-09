@@ -32,11 +32,14 @@ class PackageBox extends StatelessWidget {
                           textcolor: backcolor,
                           size: 20.sp,
                           weight: FontWeight.w500),
-                      BuildRow(), //Text Row Function............................
-                      BuildRow(),//Text Row Function............................
-                      BuildRow(),//Text Row Function............................
-                      BuildRow(),//Text Row Function............................
-
+                      BuildRow(),
+                      //Text Row Function............................
+                      BuildRow(),
+                      //Text Row Function............................
+                      BuildRow(),
+                      //Text Row Function............................
+                      BuildRow(),
+                      //Text Row Function............................
                     ]),
               )),
               SizedBox(
@@ -52,18 +55,23 @@ class PackageBox extends StatelessWidget {
                             textcolor: Colors.yellow,
                             size: 24.sp,
                             weight: FontWeight.w500),
-                        Container(
-                          height: 29.h,
-                          width: 114.w,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8).r,
-                              color: customgrey),
-                          child: Center(
-                              child: Apptext2(
-                                  text: "Purchase Package",
-                                  textcolor: btncolor,
-                                  size: 13.sp,
-                                  weight: FontWeight.w500)),
+                        InkWell(
+                          onTap: () {
+                            //purchase function......................
+                          },
+                          child: Container(
+                            height: 29.h,
+                            width: 114.w,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8).r,
+                                color: customgrey),
+                            child: Center(
+                                child: Apptext2(
+                                    text: "Purchase Package",
+                                    textcolor: btncolor,
+                                    size: 13.sp,
+                                    weight: FontWeight.w500)),
+                          ),
                         )
                       ]),
                 ),
@@ -74,7 +82,6 @@ class PackageBox extends StatelessWidget {
       ),
     );
   }
-
 
   //Text Row function................................................
   Widget BuildRow() {

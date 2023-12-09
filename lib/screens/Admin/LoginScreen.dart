@@ -7,85 +7,93 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/backbutton.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
 
   @override
+  final id = TextEditingController(); //textEditing controller.........
+  final password = TextEditingController();
+
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backcolor, //backcolor comes constants dart file........................
+      appBar: AppBar(leading: Padding(
+        padding:  const EdgeInsets.only(left: 10).r,
+        child: const backbutton(),
+      ),),
+      backgroundColor: backcolor,
+      //backcolor comes constants dart file........................
 
       body: Padding(
-        padding: const EdgeInsets.all(23).r,
+        padding: const EdgeInsets.only(left: 23,right: 23,top: 20).r,
         child: SingleChildScrollView(
           child: SafeArea(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              const backbutton(),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Align(
-                alignment: Alignment.centerRight,
-                  child: Image.asset("assets/icons/date.png")),//custom back button................
+                  alignment: Alignment.centerRight,
+                  child: Image.asset("assets/icons/date.png")),
+              //custom back button................
               SizedBox(
-            height: 49.h,
+                height: 49.h,
               ),
-              const Apptext(
-              text: "ISS COLLEGE DRIVING SCHOOL", // Apptext is Custom text widget
-              textcolor: dark,
-              size: 30,
-              weight: FontWeight.w700),
+               Apptext(
+                  text: "ISS COLLEGE DRIVING SCHOOL",
+                  // Apptext is Custom text widget
+                  textcolor: dark,
+                  size: 30.sp,
+                  weight: FontWeight.w700),
               SizedBox(
-            height: 50.h,
-              ),
-              SizedBox(
-              height: 50.h,
-              child: TextFormField(
-                  // controller: ,text editing controller...............................
-                  decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: dark),
-                          borderRadius: BorderRadius.circular(8).r),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: dark),
-                          borderRadius: BorderRadius.circular(8).r),
-                      hintText: "Enter your ID",
-                      hintStyle: TextStyle(fontSize: 18.sp),
-                      contentPadding: EdgeInsets.symmetric(
-                          vertical: 5.h, horizontal: 15.w),
-                      filled: true,
-                      fillColor: textfldcolor))),
-              SizedBox(
-            height: 10.h,
+                height: 50.h,
               ),
               SizedBox(
-              height: 50.h,
-              child: TextFormField(
-                  // controller: ,text editing controller.....................................
-                  decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: dark),
-                          borderRadius: BorderRadius.circular(8).r),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color:dark),
-                          borderRadius: BorderRadius.circular(8).r),
-                      suffixIcon: Image.asset("assets/icons/eye.png"),
-                      hintText: "Enter your password",
-                      hintStyle: TextStyle(fontSize: 18.sp),
-                      contentPadding: EdgeInsets.symmetric(
-                          vertical: 5.h, horizontal: 15.w),
-                      filled: true,
-                      fillColor: textfldcolor))),
+                  height: 50.h,
+                  child: TextFormField(
+                      controller: id,//text editing controller...............................
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: dark),
+                              borderRadius: BorderRadius.circular(8).r),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: dark),
+                              borderRadius: BorderRadius.circular(8).r),
+                          hintText: "Enter your ID",
+                          hintStyle: TextStyle(fontSize: 18.sp),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 5.h, horizontal: 15.w),
+                          filled: true,
+                          fillColor: textfldcolor))),
               SizedBox(
-            height: 60.h,
+                height: 10.h,
+              ),
+              SizedBox(
+                  height: 50.h,
+                  child: TextFormField(
+                      controller:password ,//text editing controller.....................................
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: dark),
+                              borderRadius: BorderRadius.circular(8).r),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(color: dark),
+                              borderRadius: BorderRadius.circular(8).r),
+                          suffixIcon: Icon(Icons.visibility_outlined),
+                          hintText: "Enter your password",
+                          hintStyle: TextStyle(fontSize: 18.sp),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 5.h, horizontal: 15.w),
+                          filled: true,
+                          fillColor: textfldcolor))),
+              SizedBox(
+                height: 60.h,
               ),
               Button(
-              btnname: "Login",
-              btntheam: btncolor,
-              textcolor: Colors.white,
-              outlinecolor: btncolor,
-              click: ()
-              {
-
-                // Login function..................................
-
-              }),
+                  // custom button....................
+                  btnname: "Login",
+                  btntheam: btncolor,
+                  textcolor: Colors.white,
+                  outlinecolor: btncolor,
+                  click: () {
+                    // Login function..................................
+                  }),
             ]),
           ),
         ),

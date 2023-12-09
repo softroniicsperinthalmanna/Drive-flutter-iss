@@ -17,8 +17,8 @@ class AddVehicleScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           leading: Padding(
-            padding: EdgeInsets.only(left: 10).r,
-            child: backbutton(),
+            padding: const EdgeInsets.only(left: 10).r,
+            child: const backbutton(), //Custom back Button...............
           ),
         ),
         body: Padding(
@@ -85,7 +85,7 @@ class AddVehicleScreen extends StatelessWidget {
                   indicatorPadding:
                       EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
                   indicator: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3),
+                      borderRadius: BorderRadius.circular(3).r,
                       // Creates border
                       color: Colors.grey),
                   //Change background color from here

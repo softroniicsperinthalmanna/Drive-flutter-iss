@@ -3,7 +3,6 @@ import 'package:driven/widgets/backbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import '../../widgets/Mainscreencard.dart';
 import '../../widgets/apptext.dart';
 import 'NotificationList.dart';
@@ -17,6 +16,13 @@ class SendNotification extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 10).r,
+            child: const backbutton(),
+          ),
+        ),
         backgroundColor: backcolor,
         body: Column(children: [
           Container(
@@ -24,26 +30,26 @@ class SendNotification extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    bottomRight: const Radius.circular(20).r,
-                    bottomLeft: const Radius.circular(20))
+                        bottomRight: const Radius.circular(20).r,
+                        bottomLeft: const Radius.circular(20))
                     .r,
                 color: btncolor),
             child: Padding(
-              padding:
-              const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 30)
+              padding: const EdgeInsets.only(
+                      top: 110, left: 20, right: 20, bottom: 30)
                   .r,
               child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Align(
-                        alignment: Alignment.centerLeft,
-                        child:backbutton()),
                     Apptext2(
                         text: "Send notifications",
                         textcolor: backcolor,
                         size: 40.sp,
                         weight: FontWeight.w500),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     Row(
                       children: [
                         Expanded(
@@ -51,19 +57,19 @@ class SendNotification extends StatelessWidget {
                             padding: const EdgeInsets.only(right: 15).r,
                             child: SizedBox(
                                 height: 32.h,
-                                child: TextFormField(
-                                  // controller: ,text editing controller...............................
+                                child: TextFormField(  //search text field.....................
+                                    // controller: ,text editing controller...............................
                                     decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
                                             borderSide:
-                                            const BorderSide(color: dark),
+                                                const BorderSide(color: dark),
                                             borderRadius:
-                                            BorderRadius.circular(8).r),
+                                                BorderRadius.circular(8).r),
                                         focusedBorder: OutlineInputBorder(
                                             borderSide:
-                                            const BorderSide(color: dark),
+                                                const BorderSide(color: dark),
                                             borderRadius:
-                                            BorderRadius.circular(8).r),
+                                                BorderRadius.circular(8).r),
                                         hintText: "Search Tutors",
                                         hintStyle: TextStyle(fontSize: 13.sp),
                                         contentPadding: EdgeInsets.symmetric(
@@ -72,7 +78,11 @@ class SendNotification extends StatelessWidget {
                                         fillColor: textfldcolor))),
                           ),
                         ),
-                        const Icon(Icons.search,color: Colors.white,size: 23,)
+                        const Icon(
+                          Icons.search,
+                          color: Colors.white,
+                          size: 23,
+                        )
                       ],
                     )
                   ]),
@@ -96,7 +106,7 @@ class SendNotification extends StatelessWidget {
                       labelColor: btncolor,
                       indicatorSize: TabBarIndicatorSize.tab,
                       indicatorPadding:
-                      EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
+                          EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
                       indicator: BoxDecoration(
                           borderRadius: BorderRadius.circular(3),
                           // Creates border
@@ -115,21 +125,25 @@ class SendNotification extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Expanded(child: TabBarView(children: [NotificationListAll(),NotificationListAll(),NotificationListAll()]))
+                  const Expanded(
+                      child: TabBarView(children: [
+                    NotificationListAll(),
+                    NotificationListAll(),
+                    NotificationListAll()
+                  ]))
                 ],
               ),
-            ),)
+            ),
+          )
         ]),
         floatingActionButton: FloatingActionButton(
-            onPressed: () {
-
-            },
+            onPressed: () {},
             backgroundColor: btncolor,
             child: const Center(
                 child: Icon(
-                  Icons.add,
-                  color: backcolor,
-                ))),
+              Icons.add,
+              color: backcolor,
+            ))),
       ),
     );
   }

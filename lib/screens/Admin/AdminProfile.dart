@@ -19,12 +19,21 @@ class AdminProfile extends StatelessWidget {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 10).r,
-          child: backbutton(),
+          child: const backbutton(),
         ),
         title: Text("Profile",
             style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w500, fontSize: 16.sp, color: btncolor)),
-        actions: [Icon(Icons.notifications,color: btncolor,size: 30,),SizedBox(width: 10.w,)],
+        actions: [
+          const Icon(
+            Icons.notifications,
+            color: btncolor,
+            size: 30,
+          ),
+          SizedBox(
+            width: 10.w,
+          )
+        ],
         centerTitle: true,
       ),
       body: Stack(
@@ -84,7 +93,8 @@ class AdminProfile extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    buildContainer(70.w, "Head Office"),// custom container function.......................
+                    buildContainer(70.w, "Head Office"),
+                    // custom container function.......................
                     buildContainer(96.w, "Manager"),
                     buildContainer(70.w, "Kottakkal"),
                   ],
@@ -106,6 +116,7 @@ class AdminProfile extends StatelessWidget {
                     ],
                   ),
                 ),
+                //Linear percentage indicator...........................
                 Padding(
                   padding: const EdgeInsets.only(top: 15).r,
                   child: LinearPercentIndicator(
@@ -164,7 +175,6 @@ class AdminProfile extends StatelessWidget {
                           image: "assets/icons/love.png",
                           bookmark: true,
                         ),
-                        
                       ],
                     ),
                   ),

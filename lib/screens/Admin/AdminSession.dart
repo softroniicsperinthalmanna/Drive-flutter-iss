@@ -32,8 +32,8 @@ class _AdminSessionScreenState extends State<AdminSessionScreen> {
       child: Scaffold(
         appBar: AppBar(
           leading: Padding(
-            padding: const EdgeInsets.only(left: 22).r,
-            child: backbutton(),
+            padding: const EdgeInsets.only(left: 10).r,
+            child: const backbutton(),
           ),
           title: Apptext3(
               text: "My Sessions",
@@ -47,16 +47,16 @@ class _AdminSessionScreenState extends State<AdminSessionScreen> {
           padding: const EdgeInsets.all(22).r,
           child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
             Container(
-              height: 26,
-              width: 84,
+              height: 26.h,
+              width: 84.w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius
                       .circular(8)
                       .r, color: Colors.grey),
               child: Center(
                 child: DropdownButton<String>(
-                    hint: Text("Type"),
-                    underline: SizedBox(),
+                    hint: const Text("Type"),
+                    underline: const SizedBox(),
                     value: selectedvalue,
                     items: droplist.map((String value) {
                       return DropdownMenuItem<String>(
@@ -88,7 +88,7 @@ class _AdminSessionScreenState extends State<AdminSessionScreen> {
                   indicatorPadding:
                   EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
                   indicator: BoxDecoration(
-                      borderRadius: BorderRadius.circular(3),
+                      borderRadius: BorderRadius.circular(3).r,
                       // Creates border
                       color: backcolor),
                   //Change background color from here
@@ -108,7 +108,7 @@ class _AdminSessionScreenState extends State<AdminSessionScreen> {
             ),
             const Expanded(
                 child: TabBarView(children: [
-                  MysessionallScreen(),
+                  MysessionallScreen(), //this screen same as tutor session screen.
                   MysessionfinishScreen(),
                   MysessionPendingScreen()
                 ]))
@@ -116,7 +116,7 @@ class _AdminSessionScreenState extends State<AdminSessionScreen> {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-
+                   //Add session function...........................
             },
             backgroundColor: btncolor,
             child: const Center(
