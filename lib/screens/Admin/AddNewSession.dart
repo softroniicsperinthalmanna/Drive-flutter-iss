@@ -30,7 +30,8 @@ class NewSessionScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20).r,
         child: SingleChildScrollView(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             SizedBox(
               height: 30.h,
             ),

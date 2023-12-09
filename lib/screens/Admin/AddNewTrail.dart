@@ -18,7 +18,7 @@ class NewTrailScreen extends StatelessWidget {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 10).r,
-          child: backbutton(),
+          child: const backbutton(),
         ),
         title: Apptext3(
             text: "Trial Appoinments",
@@ -30,7 +30,8 @@ class NewTrailScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20).r,
         child: SingleChildScrollView(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             SizedBox(
               height: 30.h,
             ),
@@ -42,14 +43,14 @@ class NewTrailScreen extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
-            CustomTextdrop(
+            CustomTextdrop( //Custom dropdown Text field......................
               list: Student,
               hint: "Select Student",
             ),
             SizedBox(
               height: 10.h,
             ),
-            CustomTextdrop(
+            CustomTextdrop(//Custom dropdown Text field......................
               list: Tutor,
               hint: "Select Tutor",
             ),
@@ -73,14 +74,14 @@ class NewTrailScreen extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            CustomTextdrop(
+            CustomTextdrop(//Custom dropdown Text field......................
               list: Vehicle,
               hint: "Select Vehicle",
             ),
             SizedBox(
               height: 30.h,
             ),
-            Button(
+            Button( // Custom button.............................
                 btnname: "DONE",
                 btntheam: btncolor,
                 textcolor: backcolor,
