@@ -17,8 +17,8 @@ class SkipdocumentScreen extends StatelessWidget {
       backgroundColor: backcolor,
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.only(left: 22).r,
-          child: backbutton(),
+          padding: const EdgeInsets.only(left: 10).r,
+          child: const backbutton(),
         ),
         title: Apptext3(
             text: "My Documents",
@@ -28,7 +28,7 @@ class SkipdocumentScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-          padding: const EdgeInsets.all(18),
+          padding: const EdgeInsets.all(18).r,
           child: ListView.builder(itemBuilder: (context, index) {
             return const DocumentCrd(title: "Aadhar Card",);  // list of documents........................................
           },

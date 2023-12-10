@@ -29,11 +29,14 @@ class TutordocumentScreen extends StatelessWidget {
       ),
       body: Padding(
           padding: const EdgeInsets.all(18),
-          child: ListView.builder(itemBuilder: (context, index) {
-            return const DocumentCrd(title: "Aadhar Card",);  // list of documents........................................
-          },
-            itemCount: 3,)
-      ),
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return const DocumentCrd(
+                title: "Aadhar Card",
+              ); // list of documents........................................
+            },
+            itemCount: 3,
+          )),
       floatingActionButton: FloatingActionButton(
           backgroundColor: btncolor,
           onPressed: () {
@@ -41,9 +44,9 @@ class TutordocumentScreen extends StatelessWidget {
           },
           child: const Center(
               child: Icon(
-                Icons.add,
-                color: backcolor,
-              ))),
+            Icons.add,
+            color: backcolor,
+          ))),
     );
   }
 
@@ -74,7 +77,7 @@ class TutordocumentScreen extends StatelessWidget {
                   child: SizedBox(
                       height: 36.h,
                       child: TextFormField(
-                        // controller: ,text editing controller
+                          // controller: ,text editing controller
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(color: dark),
@@ -123,5 +126,3 @@ class TutordocumentScreen extends StatelessWidget {
     );
   }
 }
-
-

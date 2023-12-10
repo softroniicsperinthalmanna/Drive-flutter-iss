@@ -53,8 +53,8 @@ class _MysessionScreenState extends State<MysessionScreen> {
                   borderRadius: BorderRadius.circular(8).r, color: Colors.grey),
               child: Center(
                 child: DropdownButton<String>(
-                    hint: Text("Type"),
-                    underline: SizedBox(),
+                    hint: const Text("Type"),
+                    underline: const SizedBox(),
                     value: selectedvalue,
                     items: droplist.map((String value) {
                       return DropdownMenuItem<String>(

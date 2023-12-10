@@ -25,7 +25,7 @@ class StudentSessionTale extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10).r,
       child: Container(
-        height: 100.h,
+        height: 108.h,
         width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20).r, color: boxcolor),

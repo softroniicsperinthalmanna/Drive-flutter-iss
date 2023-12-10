@@ -2,7 +2,6 @@ import 'package:driven/constants/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import '../../widgets/Mainscreencard.dart';
 import '../../widgets/apptext.dart';
 
@@ -37,7 +36,10 @@ class StudentMainScreen extends StatelessWidget {
                           onTap: () {
                             // notification screen function.......................................
                           },
-                          child: Icon(Icons.notifications,color: backcolor,))),
+                          child: const Icon(
+                            Icons.notifications,
+                            color: backcolor,
+                          ))),
                   SizedBox(
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +84,11 @@ class StudentMainScreen extends StatelessWidget {
                                       fillColor: textfldcolor))),
                         ),
                       ),
-                      Icon(Icons.search,color: Colors.white,size: 23,)
+                      const Icon(
+                        Icons.search,
+                        color: Colors.white,
+                        size: 23,
+                      )
                     ],
                   )
                 ]),

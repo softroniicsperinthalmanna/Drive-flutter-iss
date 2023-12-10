@@ -5,9 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class StudentLogin extends StatelessWidget {
-  const StudentLogin({super.key});
+   StudentLogin({super.key});
 
   @override
+  //Text Editing controller......................
+  final phone=TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backcolor,
@@ -17,7 +19,7 @@ class StudentLogin extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             Padding(
-              padding: const EdgeInsets.only(top: 130),
+              padding: const EdgeInsets.only(top: 130).r,
               child: SvgPicture.asset("assets/svg/men.svg"),
             ),
             SizedBox(
@@ -26,7 +28,7 @@ class StudentLogin extends StatelessWidget {
             SizedBox(
                 height: 50.h,
                 child: TextFormField(
-                    // controller: ,text editing controller
+                     controller:phone ,
                     decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderSide: const BorderSide(color: dark),

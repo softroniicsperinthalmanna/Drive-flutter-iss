@@ -48,7 +48,7 @@ class WelcomeScreen extends StatelessWidget {
               outlinecolor: btncolor,
               click: () {
 
-                // Text button function
+                // Register button function
 
               }),
           SizedBox(

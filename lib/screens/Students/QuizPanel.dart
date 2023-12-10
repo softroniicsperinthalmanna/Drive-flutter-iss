@@ -13,6 +13,15 @@ class QuizpanelScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(leading: Padding(
+        padding: const EdgeInsets.only(left: 10).r,
+        child: backbutton(),
+      ),title:Apptext3(
+          text: "Driving School",
+          textcolor: backcolor,
+          size: 18.sp,
+          weight: FontWeight.w500),),
         body: Stack(
       children: [
         SizedBox(
@@ -54,26 +63,26 @@ class QuizpanelScreen extends StatelessWidget {
             child:
                 QuizMenueButtons() //Quiz Menue Button Widget.................................
             ),
+        // Positioned(
+        //   top: 50.r,
+        //   left: 18.r,
+        //   child: Row(
+        //     children: [
+        //       backbutton(),
+        //       Padding(
+        //         padding: const EdgeInsets.only(left: 15).r,
+        //         child: Apptext3(
+        //             text: "Driving School",
+        //             textcolor: backcolor,
+        //             size: 18.sp,
+        //             weight: FontWeight.w500),
+        //       )
+        //     ],
+        //   ),
+        // ),
         Positioned(
-          top: 50.r,
-          left: 18.r,
-          child: Row(
-            children: [
-              backbutton(),
-              Padding(
-                padding: const EdgeInsets.only(left: 15).r,
-                child: Apptext3(
-                    text: "Driving School",
-                    textcolor: backcolor,
-                    size: 18.sp,
-                    weight: FontWeight.w500),
-              )
-            ],
-          ),
-        ),
-        Positioned(
-          top: 170.r,
-          left: 146.r,
+          top: 150.r,
+          left: 150.r,
           child: Column(children: [
             Apptext3(text: "your Score", textcolor: btncolor, size: 20.sp, weight: FontWeight.w500),
             Row(

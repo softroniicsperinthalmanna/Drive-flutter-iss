@@ -26,10 +26,16 @@ class TutorprofileScreen extends StatelessWidget {
             size: 16.sp,
             weight: FontWeight.w500),
         centerTitle: true,
-        actions: [Padding(
-          padding: const EdgeInsets.only(right: 10).r,
-          child: const Icon(Icons.notifications,color: btncolor,size: 30,),
-        )],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10).r,
+            child: const Icon(
+              Icons.notifications,
+              color: btncolor,
+              size: 30,
+            ),
+          )
+        ],
       ),
       backgroundColor: backcolor,
       body: Stack(
@@ -108,7 +114,10 @@ class TutorprofileScreen extends StatelessWidget {
                               side: BorderSide(color: backcolor, width: 4.w),
                               borderRadius: BorderRadius.circular(50).r,
                             ),
-                            child: const Icon(Icons.edit,size: 18,),
+                            child: const Icon(
+                              Icons.edit,
+                              size: 18,
+                            ),
                           ))
                     ],
                   ),
@@ -161,12 +170,14 @@ class TutorprofileScreen extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            ProfileBox(// Custom Profile Box........................................
+                            ProfileBox(
+                                // Custom Profile Box........................................
                                 title: "My Performance",
                                 subtitle:
                                     "Some short description of this type of report.",
                                 image: "assets/icons/men.png"),
-                            ProfileBox(// Custom Profile Box........................................
+                            ProfileBox(
+                                // Custom Profile Box........................................
                                 title: "My Documents",
                                 subtitle:
                                     "Some short description of this type of report.",
@@ -175,19 +186,23 @@ class TutorprofileScreen extends StatelessWidget {
                         ),
                         Column(
                           children: [
-                            ProfileBox(// Custom Profile Box........................................
+                            ProfileBox(
+                              // Custom Profile Box........................................
                               title: "My Students",
                               subtitle:
                                   "Some short description of this type of report.",
                               image: "assets/icons/cal.png",
-                              bookmark: true, //if book mark is true the book mark icon will shown on the box
+                              bookmark:
+                                  true, //if book mark is true the book mark icon will shown on the box
                             ),
-                            ProfileBox(// Custom Profile Box........................................
+                            ProfileBox(
+                              // Custom Profile Box........................................
                               title: "Help",
                               subtitle:
                                   "Some short description of this type of report.",
                               image: "assets/icons/love.png",
-                              bookmark: true,//if book mark is true the book mark icon will shown on the box
+                              bookmark:
+                                  true, //if book mark is true the book mark icon will shown on the box
                             )
                           ],
                         ),
@@ -202,22 +217,4 @@ class TutorprofileScreen extends StatelessWidget {
       ),
     );
   }
-
-  Widget buildContainer(double width, String title) => Padding(
-        //Container function.............................
-        padding: const EdgeInsets.only(right: 10, top: 10).r,
-        child: Container(
-          height: 30.h,
-          width: width.w,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8).r, color: customgrey),
-          child: Center(
-              child: Apptext3(
-                  text: title,
-                  textcolor: btncolor,
-                  size: 12.sp,
-                  weight: FontWeight.w500)),
-        ),
-      );
 }
-

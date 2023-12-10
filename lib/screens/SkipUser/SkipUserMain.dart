@@ -82,7 +82,7 @@ class SkipUserMainScreen extends StatelessWidget {
                                       fillColor: textfldcolor))),
                         ),
                       ),
-                      Icon(Icons.search,color: Colors.white,size: 23,)
+                      const Icon(Icons.search,color: Colors.white,size: 23,)
                     ],
                   )
                 ]),

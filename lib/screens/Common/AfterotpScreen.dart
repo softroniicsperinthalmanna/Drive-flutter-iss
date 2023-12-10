@@ -7,9 +7,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/buttons.dart';
 
 class AfterotpScreen extends StatelessWidget {
-  const AfterotpScreen({super.key});
+  AfterotpScreen({super.key});
 
   @override
+  //Tex Editing controllor......................
+  final id = TextEditingController();
+  final password = TextEditingController();
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backcolor,
@@ -26,8 +30,9 @@ class AfterotpScreen extends StatelessWidget {
                     height: 35.h,
                     width: 98.w,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6).r, color: btncolor),
-                    child:  Center(
+                        borderRadius: BorderRadius.circular(6).r,
+                        color: btncolor),
+                    child: Center(
                       child: Apptext(
                           text: "Skip",
                           textcolor: backcolor,
@@ -38,21 +43,27 @@ class AfterotpScreen extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding:  EdgeInsets.only(top: 60).r,
-                child: Apptext(text: "Think about safety first! Then drive...", textcolor: dark, size: 30.sp, weight: FontWeight.w700),
+                padding: const EdgeInsets.only(top: 60).r,
+                child: Apptext(
+                    text: "Think about safety first! Then drive...",
+                    textcolor: dark,
+                    size: 30.sp,
+                    weight: FontWeight.w700),
               ),
               Padding(
-                padding:  EdgeInsets.only(top: 80).r,
+                padding: const EdgeInsets.only(top: 80).r,
                 child: SizedBox(
                     height: 50.h,
                     child: TextFormField(
-                      // controller: ,text editing controller
+                        controller: id,
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
-                                borderSide:  BorderSide(color: Colors.grey.shade300),
+                                borderSide:
+                                    BorderSide(color: Colors.grey.shade300),
                                 borderRadius: BorderRadius.circular(8).r),
                             focusedBorder: OutlineInputBorder(
-                                borderSide:  BorderSide(color:Colors.grey.shade300),
+                                borderSide:
+                                    BorderSide(color: Colors.grey.shade300),
                                 borderRadius: BorderRadius.circular(8).r),
                             hintText: "Enter your ID",
                             hintStyle: TextStyle(fontSize: 18.sp),
@@ -61,21 +72,22 @@ class AfterotpScreen extends StatelessWidget {
                             filled: true,
                             fillColor: textfldcolor))),
               ),
-
               Padding(
-                padding:  EdgeInsets.only(top: 10).r,
+                padding: const EdgeInsets.only(top: 10).r,
                 child: SizedBox(
                     height: 50.h,
                     child: TextFormField(
-                      // controller: ,text editing controller
+                        controller: password,
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
-                                borderSide:  BorderSide(color: Colors.grey.shade300),
+                                borderSide:
+                                    BorderSide(color: Colors.grey.shade300),
                                 borderRadius: BorderRadius.circular(8).r),
                             focusedBorder: OutlineInputBorder(
-                                borderSide:  BorderSide(color:Colors.grey.shade300),
+                                borderSide:
+                                    BorderSide(color: Colors.grey.shade300),
                                 borderRadius: BorderRadius.circular(8).r),
-                            suffixIcon: Image.asset("assets/icons/eye.png"),
+                            suffixIcon: const Icon(Icons.visibility_outlined),
                             hintText: "Enter your password",
                             hintStyle: TextStyle(fontSize: 18.sp),
                             contentPadding: EdgeInsets.symmetric(
@@ -84,34 +96,33 @@ class AfterotpScreen extends StatelessWidget {
                             fillColor: textfldcolor))),
               ),
               Padding(
-                padding:  EdgeInsets.only(top: 60).r,
+                padding: const EdgeInsets.only(top: 60).r,
                 child: Button(
                     btnname: "Login",
                     btntheam: btncolor,
                     textcolor: Colors.white,
                     outlinecolor: btncolor,
                     click: () {
-
                       //Login function......................
-
                     }),
               ),
-              
-              
               Padding(
-                padding:  EdgeInsets.only(top: 15).r,
-                child: InkWell(
-                    onTap: (){
-
-                      //Login as aTutor function .................
-
-                    },
-                    child: Text("Login as Tutor",style: TextStyle(color: btncolor,fontSize: 16.sp,fontWeight: FontWeight.w700,decoration: TextDecoration.underline,decorationColor: dark),))
-              )
+                  padding: EdgeInsets.only(top: 15).r,
+                  child: InkWell(
+                      onTap: () {
+                        //Login as aTutor function .................
+                      },
+                      child: Text(
+                        "Login as Tutor",
+                        style: TextStyle(
+                            color: btncolor,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w700,
+                            decoration: TextDecoration.underline,
+                            decorationColor: dark),
+                      )))
             ]),
           ),
-
-
         ),
       ),
     );
