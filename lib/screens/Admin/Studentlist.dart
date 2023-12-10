@@ -3,7 +3,6 @@ import 'package:driven/widgets/backbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import '../../widgets/Mainscreencard.dart';
 import '../../widgets/apptext.dart';
 import 'StudentListAll.dart';
@@ -16,6 +15,13 @@ class AdminStudentScreen extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 10).r,
+            child: const backbutton(),
+          ),
+        ),
         backgroundColor: backcolor,
         body: Column(children: [
           Container(
@@ -23,21 +29,18 @@ class AdminStudentScreen extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    bottomRight: const Radius.circular(20).r,
-                    bottomLeft: const Radius.circular(20))
+                        bottomRight: const Radius.circular(20).r,
+                        bottomLeft: const Radius.circular(20))
                     .r,
                 color: btncolor),
             child: Padding(
-              padding:
-              const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 30)
+              padding: const EdgeInsets.only(
+                      top: 110, left: 20, right: 20, bottom: 20)
                   .r,
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Align(
-                        alignment: Alignment.centerLeft,
-                        child:backbutton()),
                     Apptext2(
                         text: "Students",
                         textcolor: backcolor,
@@ -51,18 +54,18 @@ class AdminStudentScreen extends StatelessWidget {
                             child: SizedBox(
                                 height: 32.h,
                                 child: TextFormField(
-                                  // controller: ,text editing controller...............................
+                                    // controller: ,text editing controller...............................
                                     decoration: InputDecoration(
                                         enabledBorder: OutlineInputBorder(
                                             borderSide:
-                                            const BorderSide(color: dark),
+                                                const BorderSide(color: dark),
                                             borderRadius:
-                                            BorderRadius.circular(8).r),
+                                                BorderRadius.circular(8).r),
                                         focusedBorder: OutlineInputBorder(
                                             borderSide:
-                                            const BorderSide(color: dark),
+                                                const BorderSide(color: dark),
                                             borderRadius:
-                                            BorderRadius.circular(8).r),
+                                                BorderRadius.circular(8).r),
                                         hintText: "Search Tutors",
                                         hintStyle: TextStyle(fontSize: 13.sp),
                                         contentPadding: EdgeInsets.symmetric(
@@ -71,64 +74,72 @@ class AdminStudentScreen extends StatelessWidget {
                                         fillColor: textfldcolor))),
                           ),
                         ),
-                        Icon(Icons.search,color: Colors.white,size: 23,)
+                        const Icon(
+                          Icons.search,
+                          color: Colors.white,
+                          size: 23,
+                        )
                       ],
                     )
                   ]),
             ),
           ),
           Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(20).r,
-                child: Column(
-                  children: [
-                    Container(
-                      // Tab bar ..........................................
-                      height: 30.h,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5).r,
-                        color: btncolor,
-                      ),
-                      child: TabBar(
-                        unselectedLabelColor: boxcolor,
-                        labelColor: btncolor,
-                        indicatorSize: TabBarIndicatorSize.tab,
-                        indicatorPadding:
-                        EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
-                        indicator: BoxDecoration(
-                            borderRadius: BorderRadius.circular(3),
-                            // Creates border
-                            color: backcolor),
-                        //Change background color from here
-                        tabs: const [
-                          Tab(
-                            text: "All",
-                          ),
-                          Tab(
-                            text: "New",
-                          ),
-                          Tab(
-                            text: "Old",
-                          ),
-                        ],
-                      ),
+            child: Padding(
+              padding: const EdgeInsets.all(20).r,
+              child: Column(
+                children: [
+                  Container(
+                    // Tab bar ..........................................
+                    height: 30.h,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5).r,
+                      color: btncolor,
                     ),
-                        Expanded(child: TabBarView(children: [StudentListAll(),StudentListAll(),StudentListAll()]))
-                  ],
-                ),
-              ),)
+                    child: TabBar(
+                      unselectedLabelColor: boxcolor,
+                      labelColor: btncolor,
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      indicatorPadding:
+                          EdgeInsets.symmetric(vertical: 5.h, horizontal: 20.w),
+                      indicator: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3),
+                          // Creates border
+                          color: backcolor),
+                      //Change background color from here
+                      tabs: const [
+                        Tab(
+                          text: "All",
+                        ),
+                        Tab(
+                          text: "New",
+                        ),
+                        Tab(
+                          text: "Old",
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Expanded(
+                      child: TabBarView(children: [
+                    StudentListAll(),
+                    StudentListAll(),
+                    StudentListAll()
+                  ]))
+                ],
+              ),
+            ),
+          )
         ]),
         floatingActionButton: FloatingActionButton(
-            onPressed: () {
-
-            },
+            onPressed: () {},
             backgroundColor: btncolor,
             child: const Center(
                 child: Icon(
-                  Icons.add,
-                  color: backcolor,
-                ))),
+              Icons.add,
+              color: backcolor,
+            ))),
       ),
     );
   }

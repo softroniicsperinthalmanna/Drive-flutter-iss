@@ -8,12 +8,16 @@ class StudentListAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:backcolor ,
+      backgroundColor: backcolor,
       body: ListView.builder(
         itemCount: 15,
         itemBuilder: (context, index) {
-        return PersonTale(persionname: "Shibin Farhan", session: "10 Sessions", date: "24-05-2023");
-      },),
+          return const PersonTale(
+              persionname: "Shibin Farhan",
+              session: "10 Sessions",
+              date: "24-05-2023");
+        },
+      ),
     );
   }
 }
